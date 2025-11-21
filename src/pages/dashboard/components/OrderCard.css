@@ -1,0 +1,169 @@
+.order-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-id {
+  color: var(--texto-principal);
+  font-weight: 700;
+}
+
+.status-badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Estilos dos status */
+.status-pendente {
+  background: rgba(99, 102, 241, 0.15);
+  color: #6366f1; /* azul */
+  border: 1px solid rgba(99, 102, 241, 0.35);
+}
+
+.status-em_preparo {
+  background: rgba(234, 179, 8, 0.2);
+  color: #d97706; /* laranja */
+  border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+.status-pronto {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981; /* verde */
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.status-enviado {
+  background: rgba(59, 130, 246, 0.15);
+  color: #2563eb; /* azul */
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.status-entregue {
+  background: rgba(16, 185, 129, 0.25);
+  color: #059669; /* verde escuro */
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  font-weight: 500;
+}
+
+.status-cancelado {
+  background-color: #ef4444;
+  color: white;
+}
+
+.order-card.canceled {
+  opacity: 0.8;
+  background-color: rgba(239, 68, 68, 0.05);
+  border-left: 4px solid #ef4444;
+}
+
+.canceled-text {
+  color: #ef4444;
+  font-weight: 500;
+}
+
+.order-card.canceled .status-badge {
+  text-decoration: line-through;
+}
+
+.order-items ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--texto-secundario);
+  font-size: 14px;
+}
+
+.order-items .empty-items {
+  color: var(--texto-secundario);
+  font-size: 14px;
+}
+
+.order-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.order-total {
+  color: var(--texto-principal);
+  font-weight: 700;
+}
+
+.order-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Estilos dos botões de ação */
+.action-iniciar {
+  background: #3b82f6; /* azul */
+  color: white;
+}
+.action-iniciar:hover {
+  background: #2563eb;
+}
+
+.action-finalizar-preparo {
+  background: #10b981; /* verde */
+  color: white;
+}
+.action-finalizar-preparo:hover {
+  background: #0d9f6e;
+}
+
+.action-enviar {
+  background: #8b5cf6; /* roxo */
+  color: white;
+}
+.action-enviar:hover {
+  background: #7c3aed;
+}
+
+.action-confirmar-entrega {
+  background: #10b981; /* verde */
+  color: white;
+}
+.action-confirmar-entrega:hover {
+  background: #0d9f6e;
+}
+
+.action-cancelar {
+  background: #ef4444; /* vermelho */
+  color: white;
+}
+.action-cancelar:hover { 
+  background: #dc2626;
+}
+
+/* Texto para status finais */
+.delivered-text {
+  color: #10b981;
+  font-weight: 500;
+}
+
+.canceled-text {
+  color: #ef4444;
+  font-weight: 500;
+}

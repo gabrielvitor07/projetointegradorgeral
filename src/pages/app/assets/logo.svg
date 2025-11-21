@@ -1,0 +1,18 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M60 10 L80 30 L80 50 L60 70 L40 50 L40 30 Z" fill="#FF7622" opacity="0.9"/>
+    <path d="M60 20 L75 35 L75 50 L60 65 L45 50 L45 35 Z" fill="#FF7622" opacity="0.7"/>
+    <path d="M60 30 L70 40 L70 50 L60 60 L50 50 L50 40 Z" fill="#FF7622" opacity="0.5"/>
+    <path d="M60 40 L65 45 L65 50 L60 55 L55 50 L55 45 Z" fill="#FF7622" opacity="0.3"/>
+    
+    <path d="M20 50 L30 60 L30 80 L20 90 L10 80 L10 60 Z" fill="#FF7622" opacity="0.8"/>
+    <path d="M25 55 L28 58 L28 75 L25 78 L22 75 L22 58 Z" fill="#FF7622" opacity="0.6"/>
+    
+    <path d="M100 50 L110 60 L110 80 L100 90 L90 80 L90 60 Z" fill="#FF7622" opacity="0.8"/>
+    <path d="M95 55 L98 58 L98 75 L95 78 L92 75 L92 58 Z" fill="#FF7622" opacity="0.6"/>
+    
+    <circle cx="60" cy="60" r="15" fill="#FF7622"/>
+    <circle cx="60" cy="60" r="10" fill="#FF9A56"/>
+    <circle cx="60" cy="60" r="5" fill="#FFB380"/>
+  </g>
+</svg>

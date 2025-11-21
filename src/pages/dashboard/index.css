@@ -1,0 +1,129 @@
+:root {
+  /* Cores do tema claro minimalista */
+  --fundo-principal: #ffffff;
+  --sidebar-bg: #121223;
+  --cor-secundaria: #ff7622;
+  --card-bg: #f8f9fa;
+  --texto-principal: #1a1a1a;
+  --texto-secundario: #6c757d;
+  
+  /* Cores de status mantidas */
+  --verde: #10b981;
+  --amarelo: #f59e0b;
+  --branco: #ffffff;
+  
+  /* Cores antigas para compatibilidade */
+  --azul-principal: #ff7622;
+  --azul-escuro: #e56817;
+  --cinza-escuro: #6c757d;
+  --cinza-medio: #495057;
+  --cinza-claro: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--fundo-principal);
+  color: var(--texto-principal);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header-azul {
+  background-color: var(--cor-secundaria);
+  color: var(--branco);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.status-confirmado {
+  background: var(--verde);
+  color: var(--branco);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status-relatorio {
+  background: var(--amarelo);
+  color: #1f1d2b;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: var(--branco);
+  color: var(--texto-principal);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--cor-secundaria);
+  box-shadow: 0 0 0 3px rgba(255, 118, 34, 0.15);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--cor-secundaria);
+  color: var(--branco);
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+tr:hover {
+  background-color: rgba(255, 118, 34, 0.05);
+}

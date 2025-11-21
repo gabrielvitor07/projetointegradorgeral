@@ -1,0 +1,142 @@
+.conteiner-carregamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--fundo-principal);
+  position: relative;
+}
+
+.conteudo-carregamento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.logo-carregamento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.imagem-logo {
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  animation: aparecerDeCima 0.8s ease-out;
+}
+
+.logo-estilizado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: aparecerDeCima 0.8s ease-out;
+}
+
+.icone-logo {
+  font-size: 80px;
+  color: var(--cor-secundaria);
+  line-height: 1;
+  animation: pulsar 2s ease-in-out infinite;
+}
+
+.titulo-logo {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--cor-secundaria);
+  margin: 0;
+  text-align: center;
+}
+
+@keyframes pulsar {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+.texto-carregamento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: aparecer 1s ease-out 0.6s both;
+}
+
+.texto-carregamento p {
+  font-size: 20px;
+  color: var(--texto-principal);
+  font-weight: 500;
+  margin: 0;
+}
+
+.subtitulo-carregamento {
+  font-size: 16px;
+  color: var(--texto-secundario);
+  font-weight: 400;
+  margin: 0;
+  animation: aparecer 1s ease-out 0.8s both;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes aparecerDeCima {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aparecerDeBaixo {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .imagem-logo {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .icone-logo {
+    font-size: 60px;
+  }
+
+  .titulo-logo {
+    font-size: 36px;
+  }
+
+  .texto-carregamento {
+    font-size: 18px;
+  }
+}
+

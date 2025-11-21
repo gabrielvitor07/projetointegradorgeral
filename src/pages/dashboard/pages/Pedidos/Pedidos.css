@@ -1,0 +1,223 @@
+.pedidos {
+  width: 100%;
+}
+
+.pedidos-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+}
+
+.search-container {
+  flex: 1;
+  max-width: 500px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--branco);
+  color: var(--texto-principal);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--cor-secundaria);
+  color: var(--branco);
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #e56817;
+}
+
+.btn-secondary {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--texto-principal);
+  padding: 10px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.status-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.03);
+  color: var(--texto-secundario);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background-color: rgba(255, 118, 34, 0.1);
+}
+
+.filter-btn.active {
+  background-color: var(--cor-secundaria);
+  color: var(--branco);
+  border-color: var(--cor-secundaria);
+}
+
+.pedidos-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pedidos-table thead {
+  background-color: var(--cor-secundaria);
+}
+
+.pedidos-table th {
+  color: var(--branco);
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+  font-size: 14px;
+}
+
+.pedidos-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  color: var(--texto-principal);
+}
+
+.pedidos-table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.pedidos-table tbody tr:hover {
+  background-color: rgba(255, 118, 34, 0.1);
+}
+
+.pedido-id {
+  color: var(--cor-secundaria);
+  font-weight: 700;
+}
+
+.cliente-nome {
+  color: var(--texto-principal);
+  font-weight: 600;
+}
+
+.valor-cell {
+  color: #10b981; /* Using a more vibrant green for better visibility */
+  font-weight: 700;
+  font-size: 15px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons-cell {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  font-weight: normal;
+  color: var(--texto-secundario);
+}
+
+.btn-icon:hover {
+  background-color: rgba(255, 118, 34, 0.2);
+  color: var(--cor-secundaria);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination-btn {
+  background-color: var(--cor-secundaria);
+  color: var(--branco);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.pagination-btn:hover {
+  background-color: #e56817;
+}
+
+.pagination-info {
+  color: var(--texto-secundario);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .pedidos-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-container {
+    max-width: 100%;
+  }
+
+  .action-buttons {
+    justify-content: stretch;
+  }
+
+  .action-buttons button {
+    flex: 1;
+  }
+
+  .status-filters {
+    flex-wrap: wrap;
+  }
+
+  .table-container {
+    overflow-x: scroll;
+  }
+}
+
+/* --- Cards layout additions --- */
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .orders-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .orders-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1280px) {
+  .orders-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
