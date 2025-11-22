@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Loading.css';
+import logo from '../../../../assets/logo.svg';
 
 function Loading() {
   const navegar = useNavigate();
@@ -19,22 +20,10 @@ function Loading() {
       <div className="conteudo-carregamento">
         <div className="logo-carregamento">
           <img 
-            src="/logo.png" 
-            alt="Logo" 
+            src={logo}
+            alt="Logo"
             className="imagem-logo"
-            onError={(e) => {
-              // Se a imagem não existir, esconde a imagem e mostra o logo estilizado
-              e.target.style.display = 'none';
-              const alternativa = e.target.parentElement.querySelector('.logo-estilizado');
-              if (alternativa) {
-                alternativa.style.display = 'flex';
-              }
-            }}
           />
-          <div className="logo-estilizado" style={{ display: 'none' }}>
-            <div className="icone-logo">▣</div>
-            <h1 className="titulo-logo">Dashboard</h1>
-          </div>
         </div>
         <div className="texto-carregamento">
           <p>Bem-vindo</p>

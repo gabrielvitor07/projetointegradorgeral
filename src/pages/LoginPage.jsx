@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Facebook, Mail, Apple } from 'lucide-react';
 import { validateEmail, validatePassword } from '../utils/validation';
-import logo from '../assets/logo.svg';
+import logo from '../assets/ChatGPT_Image_21_de_nov._de_2025__16_26_58-removebg-preview.png';
 
 function LoginPage() {
   const navigate = useNavigate();

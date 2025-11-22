@@ -1,68 +1,71 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    @apply m-0 font-sans antialiased bg-gray-light;
+  }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+  #root {
+    @apply min-h-screen bg-gray-light;
+  }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  .App {
+    @apply min-h-screen bg-gray-light;
+  }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --primary-color: #FF7622;
+    --dark-color: #121223;
+    --white: #ffffff;
+    --gray-light: #f5f5f5;
+    --gray-medium: #e0e0e0;
+    --gray-dark: #666666;
   }
-  a:hover {
-    color: #747bff;
+
+  input,
+  button,
+  textarea {
+    @apply font-sans;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+@layer components {
+  .container-app {
+    @apply px-4 sm:px-6 md:px-8 min-h-screen;
+  }
+
+  .btn-primary {
+    @apply w-full px-4 py-4 bg-primary text-white border-0 rounded-xl text-base font-bold cursor-pointer transition-opacity hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl p-4 sm:p-5 mb-4 shadow-sm;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 sm:py-4 border border-gray-medium rounded-xl text-base outline-none transition-colors focus:border-primary;
+  }
+
+  .header-dark {
+    @apply bg-dark text-white px-4 sm:px-6 py-8 sm:py-10 pb-12 sm:pb-16 rounded-b-3xl text-center relative;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
