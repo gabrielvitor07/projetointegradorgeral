@@ -1,8 +1,9 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAutenticacao } from '../contexts/AuthContext.jsx';
+import Loading from '../pages/Loading/Loading';
 
-const AUTH_TEMPORARILY_DISABLED = true;
+const AUTH_TEMPORARILY_DISABLED = false;
 
 function RotaProtegida({ children }) {
   const { estaAutenticado, carregando } = useAutenticacao();
@@ -13,27 +14,23 @@ function RotaProtegida({ children }) {
 
   // Mostrar loading enquanto verifica autenticação
   if (carregando) {
-    return (
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '100vh',
-        backgroundColor: 'var(--fundo-principal)',
-        color: 'var(--texto-principal)'
-      }}>
-        Carregando...
-      </div>
-    );
+    return <Loading />;
   }
 
-  // Redirecionar para loading se não autenticado (que depois redireciona para login)
+  // Redirecionar para a tela de login da dashboard se não autenticado
   if (!estaAutenticado) {
-    return <Navigate to="/dashboard/loading" replace />;
+    return <Navigate to="/dashboard/login" replace />;
   }
 
   return children;
 }
 
-export default RotaProtegida;
+export function RotaAdmin({ children }) {
+  const { carregando, estaAutenticado, ehAdminPrincipal } = useAutenticacao();
+  if (carregando) return <Loading />;
+  if (!estaAutenticado) return <Navigate to="/dashboard/login" replace />;
+  if (!ehAdminPrincipal()) return <Navigate to="/dashboard/acesso-negado" replace />;
+  return children;
+}
 
+export default RotaProtegida;

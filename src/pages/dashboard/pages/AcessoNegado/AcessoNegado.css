@@ -1,0 +1,7 @@
+.acesso-negado { display: flex; align-items: center; justify-content: center; min-height: 60vh; padding: 20px; }
+.acesso-card { max-width: 560px; width: 100%; padding: 24px; text-align: center; background: var(--fundo-card, #fff); border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.acesso-card h2 { margin-bottom: 8px; }
+.acesso-card p { color: #6b7280; margin-bottom: 16px; }
+.acoes { display: flex; gap: 10px; justify-content: center; }
+.btn { background: #6366f1; color: white; border: none; padding: 10px 14px; border-radius: 8px; cursor: pointer; }
+.btn.secundario { background: #e5e7eb; color: #111827; }

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Loading.css';
-import logo from '../../../../assets/logo.svg';
+import logo from '../../../../assets/ChatGPT_Image_21_de_nov._de_2025__16_26_58-removebg-preview.png';
 
 function Loading() {
   const navegar = useNavigate();
@@ -9,7 +9,7 @@ function Loading() {
   useEffect(() => {
     // Redirecionar para login após 2.5 segundos
     const temporizador = setTimeout(() => {
-      navegar('/login');
+      navegar('/dashboard/login');
     }, 2500);
 
     return () => clearTimeout(temporizador);

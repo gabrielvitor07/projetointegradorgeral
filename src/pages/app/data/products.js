@@ -76,6 +76,23 @@ export const products = [
     price: 22.00,
     image: 'https://images.unsplash.com/photo-1509722747041-616f39b57569?w=400&h=300&fit=crop',
     category: 'sandwich'
+  },
+  // Drinks
+  {
+    id: 10,
+    name: 'Refrigerante 2L',
+    description: 'Coca-Cola, Guaraná ou Fanta. Garrafa 2 litros bem gelada.',
+    price: 12.00,
+    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&h=300&fit=crop',
+    category: 'drink'
+  },
+  {
+    id: 11,
+    name: 'Suco Natural',
+    description: 'Laranja, limão, morango ou abacaxi - 500ml, feito na hora.',
+    price: 10.00,
+    image: 'https://images.unsplash.com/photo-1561047029-3000e62f07f3?w=400&h=300&fit=crop',
+    category: 'drink'
   }
 ]
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { useAutenticacao } from '../contexts/AuthContext';
 import '../index.css';
 import '../App.css';
@@ -7,6 +7,7 @@ import logo from '../../../assets/ChatGPT_Image_21_de_nov._de_2025__16_26_58-rem
 
 const DashboardLayout = ({ children }) => {
   const { sair, usuario } = useAutenticacao();
+  const navigate = useNavigate();
   const content = children ?? <Outlet />;
 
   const navItems = [
@@ -14,7 +15,13 @@ const DashboardLayout = ({ children }) => {
     { to: '/dashboard/pedidos', label: 'Pedidos', icon: '◈' },
     { to: '/dashboard/cardapio', label: 'Cardápio', icon: '☰' },
     { to: '/dashboard/mais-vendidos', label: 'Mais Vendidos', icon: '★' },
+    { to: '/dashboard/configuracoes', label: 'Configurações', icon: '⚙' },
   ];
+
+  const handleLogout = () => {
+    sair();
+    navigate('/dashboard/login', { replace: true });
+  };
 
   return (
     <div className="aplicacao">
@@ -47,7 +54,7 @@ const DashboardLayout = ({ children }) => {
               {usuario.email}
             </div>
           )}
-          <button onClick={sair} className="botao-sair">
+          <button onClick={handleLogout} className="botao-sair">
             Sair
           </button>
         </div>

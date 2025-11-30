@@ -76,11 +76,11 @@ function CriarItem() {
       URL.revokeObjectURL(formData.imagemUrl);
     }
     
-    navigate('/cardapio');
+    navigate('/dashboard/cardapio');
   };
 
   const handleCancel = () => {
-    navigate('/cardapio');
+    navigate('/dashboard/cardapio');
   };
 
   return (

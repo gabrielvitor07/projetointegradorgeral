@@ -88,7 +88,7 @@ function EditarItem() {
     // Exemplo: api.atualizarItem(itemId, formDataToSend).then(...)
     
     // Navega de volta para a lista de itens
-    navigate('/cardapio');
+    navigate('/dashboard/cardapio');
   };
   
   // Limpa a URL da imagem quando o componente for desmontado
@@ -101,7 +101,7 @@ function EditarItem() {
   }, [formData.imagemUrl]);
 
   const handleCancel = () => {
-    navigate('/cardapio');
+    navigate('/dashboard/cardapio');
   };
 
   return (

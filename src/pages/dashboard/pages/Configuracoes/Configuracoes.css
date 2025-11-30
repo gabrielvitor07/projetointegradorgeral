@@ -1,0 +1,19 @@
+.config-page { padding: 20px; }
+.page-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.page-subtitle { color: #6b7280; font-size: 14px; }
+.card { background: var(--fundo-card, #fff); border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.config-card { padding: 20px; }
+.config-form { display: flex; flex-direction: column; gap: 16px; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-weight: 600; font-size: 14px; }
+.form-group input { padding: 10px 12px; border: 1px solid #e5e7eb; border-radius: 8px; background: var(--fundo-input, #fff); color: var(--texto-principal, #111827); }
+.form-group input:focus { outline: none; border-color: #6366f1; box-shadow: 0 0 0 3px rgba(99,102,241,0.15); }
+.form-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 8px; }
+.btn-cancel { background: #e5e7eb; color: #111827; border: none; padding: 10px 14px; border-radius: 8px; cursor: pointer; }
+.btn-confirm { background: #6366f1; color: white; border: none; padding: 10px 14px; border-radius: 8px; cursor: pointer; }
+.btn-confirm:disabled, .btn-cancel:disabled { opacity: 0.6; cursor: not-allowed; }
+.alert { padding: 10px 12px; border-radius: 8px; font-size: 14px; }
+.alert-success { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
+.alert-error { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+@media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }

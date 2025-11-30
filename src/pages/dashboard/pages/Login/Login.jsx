@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAutenticacao } from '../../contexts/AuthContext.jsx';
+import Loading from '../Loading/Loading';
 import './Login.css';
 
 function Login() {
   const navegar = useNavigate();
-  const { entrar, estaAutenticado } = useAutenticacao();
+  const { entrar, estaAutenticado, carregando } = useAutenticacao();
+  const [splash, setSplash] = useState(true);
   const [dadosFormulario, setDadosFormulario] = useState({
     email: '',
     senha: ''
@@ -16,9 +18,23 @@ function Login() {
   // Redirecionar se já estiver autenticado
   useEffect(() => {
     if (estaAutenticado) {
-      navegar('/');
+      navegar('/dashboard');
     }
   }, [estaAutenticado, navegar]);
+
+  // Mostrar tela de carregamento enquanto verifica estado de autenticação
+  if (carregando) {
+    return <Loading />;
+  }
+
+  useEffect(() => {
+    const t = setTimeout(() => setSplash(false), 1200);
+    return () => clearTimeout(t);
+  }, []);
+
+  if (splash) {
+    return <Loading />;
+  }
 
   const lidarComMudanca = (e) => {
     const { name, value } = e.target;
@@ -55,7 +71,7 @@ function Login() {
       const resultado = await entrar(dadosFormulario.email, dadosFormulario.senha);
       
       if (resultado.success) {
-        navegar('/');
+        navegar('/dashboard');
       } else {
         setErro(resultado.error || 'Erro ao fazer login. Tente novamente.');
       }
